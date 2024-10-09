@@ -1,0 +1,38 @@
+// Use this to add Bootstrap to the code
+// @import "C:/Users/NAME/node_modules/bootstrap/scss/bootstrap";
+
+// Steps to run -- sass --watch styles.scss:style.css
+
+// Loop for max-height, height, min-height in percentage
+@for $i from 1 through 100 {
+  $value: $i * 1%;
+  
+  .mhp-#{$i} {
+    max-height: #{$value};
+  }
+  
+  .hp-#{$i} {
+    height: #{$value};
+  }
+
+  .mhp-#{$i} {
+    min-height: #{$value};
+  }
+}
+
+// Loop for max-width, width, min-width in percentage
+@for $i from 1 through 100 {
+  $value: $i * 1%;
+  
+  .mwp-#{$i} {
+    max-width: #{$value};
+  }
+
+  .wp-#{$i} {
+    width: #{$value};
+  }
+
+  .mwp-#{$i} {
+    min-width: #{$value};
+  }
+}
