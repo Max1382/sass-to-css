@@ -1,0 +1,87 @@
+// Use this to add Bootstrap to the code
+// @import "C:/Users/NAME/node_modules/bootstrap/scss/bootstrap";
+
+// Steps to run -- sass --watch pc-mobile-new.sass:style.css
+
+// ✅ Original Classes (Percentage-based) - UNCHANGED
+@for $i from 1 through 100 {
+    $value: $i * 1%;
+  
+    .mhp-#{$i} { max-height: #{$value}; }
+    .hp-#{$i} { height: #{$value}; }
+    .minhp-#{$i} { min-height: #{$value}; }
+  
+    .mwp-#{$i} { max-width: #{$value}; }
+    .wp-#{$i} { width: #{$value}; }
+    .minwp-#{$i} { min-width: #{$value}; }
+  }
+  
+  // ✅ Original Classes (Pixel-based) - UNCHANGED
+  @for $i from 1 through 1500 { // Up to 2000px for more flexibility
+    $value: $i * 1px;
+  
+    .mhp-px-#{$i} { max-height: #{$value}; }
+    .hp-px-#{$i} { height: #{$value}; }
+    .minhp-px-#{$i} { min-height: #{$value}; }
+  
+    .mwp-px-#{$i} { max-width: #{$value}; }
+    .wp-px-#{$i} { width: #{$value}; }
+    .minwp-px-#{$i} { min-width: #{$value}; }
+  }
+  
+  // ✅ New: PC & Mobile Variants (Without Affecting Original Classes)
+  
+  // 📌 PC (≥1024px)
+  @media (min-width: 1024px) {
+    @for $i from 1 through 100 {
+      $value: $i * 1%;
+  
+      .mhp-#{$i}-pc { max-height: #{$value}; }
+      .hp-#{$i}-pc { height: #{$value}; }
+      .minhp-#{$i}-pc { min-height: #{$value}; }
+  
+      .mwp-#{$i}-pc { max-width: #{$value}; }
+      .wp-#{$i}-pc { width: #{$value}; }
+      .minwp-#{$i}-pc { min-width: #{$value}; }
+    }
+  
+    @for $i from 1 through 1500 {
+      $value: $i * 1px;
+  
+      .mhp-px-#{$i}-pc { max-height: #{$value}; }
+      .hp-px-#{$i}-pc { height: #{$value}; }
+      .minhp-px-#{$i}-pc { min-height: #{$value}; }
+  
+      .mwp-px-#{$i}-pc { max-width: #{$value}; }
+      .wp-px-#{$i}-pc { width: #{$value}; }
+      .minwp-px-#{$i}-pc { min-width: #{$value}; }
+    }
+  }
+  
+  // 📌 Mobile (≤768px)
+  @media (max-width: 768px) {
+    @for $i from 1 through 100 {
+      $value: $i * 1%;
+  
+      .mhp-#{$i}-m { max-height: #{$value}; }
+      .hp-#{$i}-m { height: #{$value}; }
+      .minhp-#{$i}-m { min-height: #{$value}; }
+  
+      .mwp-#{$i}-m { max-width: #{$value}; }
+      .wp-#{$i}-m { width: #{$value}; }
+      .minwp-#{$i}-m { min-width: #{$value}; }
+    }
+  
+    @for $i from 1 through 1500 {
+      $value: $i * 1px;
+  
+      .mhp-px-#{$i}-m { max-height: #{$value}; }
+      .hp-px-#{$i}-m { height: #{$value}; }
+      .minhp-px-#{$i}-m { min-height: #{$value}; }
+  
+      .mwp-px-#{$i}-m { max-width: #{$value}; }
+      .wp-px-#{$i}-m { width: #{$value}; }
+      .minwp-px-#{$i}-m { min-width: #{$value}; }
+    }
+  }
+  
